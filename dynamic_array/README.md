@@ -35,6 +35,7 @@
   <div class="code-block">
     📦 Python-Programming/<br>
     ┣ 📜 dynamic_array.py<br>
+    ┗ 📜 practice.ipynb
     ┗ 📜 README.html
   </div>
 
