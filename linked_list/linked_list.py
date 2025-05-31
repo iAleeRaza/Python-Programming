@@ -184,3 +184,17 @@ class LinkedList:
         
         self.n -= 1
         
+    
+    def replace_max(self, value):
+        if self.head is None:
+            raise ValueError("Cannot replace max in an empty linked list")
+
+        current = self.head
+        max = current
+
+        while current is not None:
+            if current.data > max.data:
+                max = current
+            current = current.next
+        
+        max.data = value
