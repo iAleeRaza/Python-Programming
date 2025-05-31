@@ -185,6 +185,8 @@ class LinkedList:
         self.n -= 1
         
     
+    # for practice purposes 
+    # this function replaces the maximum value in the linked list with a given value
     def replace_max(self, value):
         if self.head is None:
             raise ValueError("Cannot replace max in an empty linked list")
@@ -198,3 +200,34 @@ class LinkedList:
             current = current.next
         
         max.data = value
+
+    # for practice purposes 
+    # this function take all the nodes at the odd indices and returns their sum
+
+    def sum_odd_indices(self):
+
+        current = self.head
+        position = 0
+        total = 0
+
+        while current is not None:
+            if position % 2 != 0:
+                total += current.data
+            
+            current = current.next
+            position += 1
+        return total
+    
+    # practice purposes
+    # this function reverses the linked list in place
+    # means it does not create a new linked list but modifies the existing one 
+    def reverse(self):
+        prev_node = None
+        current_node = self.head
+
+        while current_node is not None:
+            next_node = current_node.next
+            current_node.next = prev_node
+            prev_node = current_node
+            current_node = next_node
+        self.head = prev_node
